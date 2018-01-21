@@ -15,7 +15,7 @@ var browserify = require('browserify');
 var tsify = require('tsify');
 var source = require('vinyl-source-stream');
 
-var TYPESCRIPT_FILES = ['./app/*.ts'];
+var TYPESCRIPT_FILES = ['./app/**/*.ts'];
 var JAVASCRIPT_FILES_LIVE = [ "./node_modules/bootstrap/dist/js/bootstrap.js","./public/dev/js/*.js"]
 var SASS_FILES = ['./public/dev/sass/**/*.scss'];
 
