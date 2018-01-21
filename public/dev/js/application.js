@@ -11,6 +11,7 @@ var file = "#file";
  * Initial Objects
  */
 var player = new player_1.Player(file, player_id);
+player.LoadFile();
 
 },{"./src/player":2}],2:[function(require,module,exports){
 "use strict";
@@ -19,9 +20,28 @@ var $ = require("jquery");
 var Player = /** @class */ (function () {
     function Player(file, audio) {
         this.file = $(file);
-        this.audio = $(audio);
+        this.audio = document.getElementById(audio);
     }
     Player.prototype.LoadFile = function () {
+        var _this = this;
+        this.file.on('change', null, function (e) {
+            var input = e.target;
+            _this.audio = document.getElementById("player");
+            _this.audio.src = URL.createObjectURL(input.files[0]);
+            _this.audio.load();
+            _this.Visualizer(_this.audio);
+        });
+    };
+    Player.prototype.Visualizer = function (audio) {
+        var context = new AudioContext();
+        var src = context.createMediaElementSource(audio);
+        var analyser = context.createAnalyser();
+        var canvas = document.getElementById("canvas");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        var ctx = canvas.getContext("2d");
+        src.connect(analyser);
+        analyser.connect(context.destination);
     };
     return Player;
 }());

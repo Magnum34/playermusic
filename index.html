@@ -13,13 +13,14 @@
     <link href="./public/live/css/style.min.css" rel="stylesheet">    
 </head>
 <body>
-    <div class="container">
+    <div class="row">
         <div id="list" class="col-4">
-            <input type="file" id="file" accept="audio/*" >
+                <input type="file" id="file" name="files[]" accept="audio/*" multiple>
         </div>
         <div id="visualizer" class="col-8">
-            <audio id="player" controls>
-            </audio>
+                <canvas id="canvas"></canvas>
+                <audio id="player" controls>
+                </audio>
         </div>
     </div>
     <script src="./public/dev/js/application.js"></script>

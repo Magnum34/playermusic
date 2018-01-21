@@ -1,1 +1,24 @@
 
+.row {
+    width: 100vw;
+}
+#player {
+    width: 60%;
+    position: fixed;
+    bottom: 10px;
+}
+#list {
+    height: 100vh;
+    background: #4DB6AC;
+}
+#file {
+    width: 90%;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+#canvas {
+    position: fixed;
+    bottom: 40px;
+    height: 100%;
+}

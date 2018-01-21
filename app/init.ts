@@ -12,6 +12,7 @@ let file = "#file";
  * Initial Objects
  */
 let player = new Player(file, player_id);
+player.LoadFile();
 
 
 
