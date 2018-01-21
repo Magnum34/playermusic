@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="" />
+    <meta name="author" content="Magnum34">
+    <title>Odtwarzacz muzyczny</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="./public/live/css/style.min.css" rel="stylesheet">    
+</head>
+<body>
+    <div class="container">
+        <div id="list" class="col-4">
+            <input type="file" id="file" accept="audio/*" >
+        </div>
+        <div id="visualizer" class="col-8">
+            <audio id="player" controls>
+            </audio>
+        </div>
+    </div>
+    <script src="./public/dev/js/application.js"></script>
+</body>
+</html>
